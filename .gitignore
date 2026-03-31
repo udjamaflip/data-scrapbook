@@ -26,23 +26,6 @@ secrets/
 *.log
 logs/
 
-# ── Data files (real data — templates and demo CSVs are committed) ─────────────
-# Real user-supplied input files are never committed.
-data/raw/*.csv
-data/raw/*.xlsx
-data/raw/*.json
-data/raw/*.parquet
-!data/raw/templates/
-!data/raw/*_demo.csv
-
-# Generated intermediate and final datasets are never committed.
-data/intermediate/
-data/final/
-
-# ── Outputs (auto-generated each run) ─────────────────────────────────────────
-outputs/charts/
-outputs/tables/
-
 # ── Test / type-checking caches ───────────────────────────────────────────────
 .pytest_cache/
 .mypy_cache/
@@ -69,3 +52,4 @@ desktop.ini
 scratch/
 *.tmp
 *.temp
+
