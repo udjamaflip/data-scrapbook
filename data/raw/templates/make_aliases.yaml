@@ -1,0 +1,149 @@
+# make_aliases.yaml
+#
+# Maps canonical make names → list of known variants/aliases.
+# Used by vehicle_normalization.py to standardise make names across datasets.
+#
+# Format:
+#   Canonical Name:
+#     - Alias 1
+#     - Alias 2
+#
+# Rules:
+#   - Matching is case-insensitive and ignores punctuation.
+#   - Add entries whenever you encounter a new spelling in a source dataset.
+#   - Do NOT remove existing entries without checking all source files.
+
+Acura:
+  - Acura (Honda)
+
+Alfa Romeo:
+  - Alfa-Romeo
+  - Alfa
+
+Audi:
+  - Audi AG
+
+BMW:
+  - Bmw
+  - Bayerische Motoren Werke
+
+Buick:
+  - Buick (GM)
+
+Cadillac:
+  - Cadillac (GM)
+
+Chevrolet:
+  - Chevy
+  - Chev
+  - Chevrolet (GM)
+
+Chrysler:
+  - Chrysler LLC
+  - Chrysler Group
+
+Dodge:
+  - Dodge (Chrysler)
+  - Dodge (Stellantis)
+
+Fiat:
+  - Fiat Chrysler
+
+Ford:
+  - Ford Motor Company
+  - Ford Motor
+
+Genesis:
+  - Genesis (Hyundai)
+
+GMC:
+  - GMC (GM)
+  - General Motors Truck
+
+Honda:
+  - Honda Motor
+
+Hyundai:
+  - Hyundai Motor
+
+Infiniti:
+  - Infiniti (Nissan)
+  - INFINITI
+
+Jeep:
+  - Jeep (Chrysler)
+  - Jeep (Stellantis)
+
+Kia:
+  - Kia Motors
+  - Kia (Hyundai Group)
+
+Land Rover:
+  - LandRover
+  - Land-Rover
+
+Lexus:
+  - Lexus (Toyota)
+
+Lincoln:
+  - Lincoln (Ford)
+
+Maserati:
+  - Maserati SpA
+
+Mazda:
+  - Mazda Motor
+
+Mercedes-Benz:
+  - Mercedes
+  - MB
+  - Mercedes Benz
+  - Daimler
+
+MINI:
+  - Mini
+  - Mini (BMW)
+
+Mitsubishi:
+  - Mitsubishi Motors
+
+Nissan:
+  - Nissan Motor
+
+Pontiac:
+  - Pontiac (GM)
+
+Porsche:
+  - Porsche AG
+
+Ram:
+  - Ram Trucks
+  - Ram (Chrysler)
+  - Ram (Stellantis)
+
+Saab:
+  - Saab Automobile
+
+Saturn:
+  - Saturn (GM)
+
+Subaru:
+  - Subaru (Fuji)
+  - Fuji Heavy Industries
+
+Tesla:
+  - Tesla Motors
+  - Tesla Inc
+
+Toyota:
+  - Toyota Motor
+
+Volkswagen:
+  - VW
+  - Volkwagen
+  - Volkswagon
+  - Volkswagen AG
+
+Volvo:
+  - Volvo Cars
+  - Volvo Automobile

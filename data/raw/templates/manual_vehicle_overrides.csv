@@ -1,0 +1,27 @@
+raw_make,raw_model,raw_model_year,override_make,override_model,override_model_year,override_notes
+# ---------------------------------------------------------------------------
+# manual_vehicle_overrides.csv
+#
+# One row per (make, model, year) that needs a manual correction that the
+# alias YAML cannot handle generically.
+#
+# Columns:
+#   raw_make          – make name as it appears in the source dataset
+#   raw_model         – model name as it appears in the source dataset
+#   raw_model_year    – model year as it appears (leave blank to match all years)
+#   override_make     – corrected make (leave blank to keep existing)
+#   override_model    – corrected model (leave blank to keep existing)
+#   override_model_year – corrected year (leave blank to keep existing)
+#   override_notes    – human-readable explanation of why this override exists
+#
+# Rules:
+#   - Lines beginning with # are comments and are skipped.
+#   - Matching is case-insensitive and punctuation-normalised.
+#   - Overrides take precedence over all alias-based normalisation.
+#   - Document your reasoning in override_notes — do not add silent overrides.
+# ---------------------------------------------------------------------------
+#
+# Example rows (uncomment and edit as needed):
+#
+# Chev,Silverado,2003,Chevrolet,Silverado 1500,2003,Source uses 'Chev' and bare 'Silverado' for 1500 only
+# VW,Golf GTI,2010,Volkswagen,Golf,,NHTSA files Golf GTI separately but it is the same model

@@ -1,0 +1,137 @@
+# model_aliases.yaml
+#
+# Maps canonical model names → list of known variants/aliases.
+# Used by vehicle_normalization.py to standardise model names across datasets.
+#
+# Format:
+#   Canonical Model:
+#     - Alias 1
+#     - Alias 2
+#
+# Notes:
+#   - Matching is per-make – this file handles cross-dataset spelling differences.
+#   - For make-specific model conflicts, use manual_vehicle_overrides.csv instead.
+#   - Keep entries alphabetical within each make.
+
+# --- Chevrolet ---
+Silverado 1500:
+  - Silverado1500
+  - C/K 1500
+  - C/K1500
+
+Silverado 2500:
+  - Silverado2500
+  - C/K 2500
+
+Silverado 3500:
+  - Silverado3500
+  - C/K 3500
+
+Colorado:
+  - S-10
+
+# --- Dodge / Ram ---
+Ram 1500:
+  - Ram Pickup 1500
+  - Ram 150
+  - D150
+
+Ram 2500:
+  - Ram Pickup 2500
+  - D250
+
+Durango:
+  - Dodge Durango
+
+# --- Ford ---
+F-150:
+  - F150
+  - F 150
+
+F-250:
+  - F250
+  - F 250
+
+F-350:
+  - F350
+  - F 350
+
+Explorer:
+  - Ford Explorer
+
+Mustang:
+  - Ford Mustang
+
+# --- Honda ---
+CR-V:
+  - CRV
+  - CR V
+
+HR-V:
+  - HRV
+  - HR V
+
+# --- Hyundai ---
+Tucson:
+  - ix35
+
+Santa Fe:
+  - SantaFe
+
+# --- Kia ---
+Sportage:
+  - Kia Sportage
+
+Sorento:
+  - Kia Sorento
+
+# --- Nissan ---
+Frontier:
+  - Hardbody
+  - Navara
+
+Altima:
+  - Nissan Altima
+
+# --- Toyota ---
+Camry:
+  - Toyota Camry
+
+Corolla:
+  - Toyota Corolla
+
+Highlander:
+  - Kluger
+
+Land Cruiser:
+  - LandCruiser
+  - Land-Cruiser
+
+RAV4:
+  - RAV 4
+  - Rav4
+
+Tacoma:
+  - Toyota Tacoma
+
+Tundra:
+  - Toyota Tundra
+
+4Runner:
+  - 4 Runner
+  - FourRunner
+
+# --- Volkswagen ---
+Golf:
+  - Golf GTI
+  - Rabbit
+
+Jetta:
+  - Vento
+  - Bora
+
+Passat:
+  - Magotan
+
+Tiguan:
+  - VW Tiguan

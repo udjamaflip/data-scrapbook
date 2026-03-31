@@ -1,0 +1,496 @@
+make,model,model_year,year_of_exposure,vehicles_on_road,registered_vehicle_years,exposure_source,exposure_quality_flag
+Toyota,Camry,2005,2006,456274,456274,synthetic,low
+Toyota,Camry,2005,2007,394335,394335,synthetic,low
+Toyota,Camry,2005,2008,372311,372311,synthetic,low
+Toyota,Camry,2005,2009,340710,340710,synthetic,low
+Toyota,Camry,2005,2010,330000,330000,synthetic,low
+Toyota,Camry,2010,2011,529188,529188,synthetic,low
+Toyota,Camry,2010,2012,497161,497161,synthetic,low
+Toyota,Camry,2010,2013,421948,421948,synthetic,low
+Toyota,Camry,2010,2014,401756,401756,synthetic,low
+Toyota,Camry,2010,2015,355008,355008,synthetic,low
+Toyota,Camry,2015,2016,563681,563681,synthetic,low
+Toyota,Camry,2015,2017,533885,533885,synthetic,low
+Toyota,Camry,2015,2018,467669,467669,synthetic,low
+Toyota,Camry,2015,2019,438037,438037,synthetic,low
+Toyota,Camry,2015,2020,421735,421735,synthetic,low
+Toyota,Camry,2020,2021,492202,492202,synthetic,low
+Toyota,Camry,2020,2022,438197,438197,synthetic,low
+Toyota,Camry,2020,2023,418438,418438,synthetic,low
+Toyota,Camry,2020,2024,393363,393363,synthetic,low
+Toyota,Camry,2020,2025,333709,333709,synthetic,low
+Toyota,Corolla,2005,2006,391621,391621,synthetic,low
+Toyota,Corolla,2005,2007,356526,356526,synthetic,low
+Toyota,Corolla,2005,2008,316493,316493,synthetic,low
+Toyota,Corolla,2005,2009,285707,285707,synthetic,low
+Toyota,Corolla,2005,2010,284676,284676,synthetic,low
+Toyota,Corolla,2010,2011,413136,413136,synthetic,low
+Toyota,Corolla,2010,2012,370663,370663,synthetic,low
+Toyota,Corolla,2010,2013,341151,341151,synthetic,low
+Toyota,Corolla,2010,2014,338413,338413,synthetic,low
+Toyota,Corolla,2010,2015,304006,304006,synthetic,low
+Toyota,Corolla,2015,2016,474127,474127,synthetic,low
+Toyota,Corolla,2015,2017,432922,432922,synthetic,low
+Toyota,Corolla,2015,2018,390754,390754,synthetic,low
+Toyota,Corolla,2015,2019,375143,375143,synthetic,low
+Toyota,Corolla,2015,2020,325537,325537,synthetic,low
+Toyota,Corolla,2020,2021,412133,412133,synthetic,low
+Toyota,Corolla,2020,2022,389625,389625,synthetic,low
+Toyota,Corolla,2020,2023,351136,351136,synthetic,low
+Toyota,Corolla,2020,2024,330810,330810,synthetic,low
+Toyota,Corolla,2020,2025,295993,295993,synthetic,low
+Toyota,RAV4,2010,2011,316341,316341,synthetic,low
+Toyota,RAV4,2010,2012,272246,272246,synthetic,low
+Toyota,RAV4,2010,2013,255244,255244,synthetic,low
+Toyota,RAV4,2010,2014,236309,236309,synthetic,low
+Toyota,RAV4,2010,2015,212749,212749,synthetic,low
+Toyota,RAV4,2015,2016,408777,408777,synthetic,low
+Toyota,RAV4,2015,2017,370982,370982,synthetic,low
+Toyota,RAV4,2015,2018,347595,347595,synthetic,low
+Toyota,RAV4,2015,2019,331486,331486,synthetic,low
+Toyota,RAV4,2015,2020,296818,296818,synthetic,low
+Toyota,RAV4,2020,2021,493509,493509,synthetic,low
+Toyota,RAV4,2020,2022,446637,446637,synthetic,low
+Toyota,RAV4,2020,2023,413338,413338,synthetic,low
+Toyota,RAV4,2020,2024,406344,406344,synthetic,low
+Toyota,RAV4,2020,2025,363499,363499,synthetic,low
+Toyota,Highlander,2010,2011,222400,222400,synthetic,low
+Toyota,Highlander,2010,2012,195743,195743,synthetic,low
+Toyota,Highlander,2010,2013,190474,190474,synthetic,low
+Toyota,Highlander,2010,2014,165545,165545,synthetic,low
+Toyota,Highlander,2010,2015,155706,155706,synthetic,low
+Toyota,Highlander,2015,2016,293706,293706,synthetic,low
+Toyota,Highlander,2015,2017,261206,261206,synthetic,low
+Toyota,Highlander,2015,2018,238341,238341,synthetic,low
+Toyota,Highlander,2015,2019,222057,222057,synthetic,low
+Toyota,Highlander,2015,2020,207467,207467,synthetic,low
+Toyota,Highlander,2020,2021,318555,318555,synthetic,low
+Toyota,Highlander,2020,2022,277472,277472,synthetic,low
+Toyota,Highlander,2020,2023,250107,250107,synthetic,low
+Toyota,Highlander,2020,2024,236938,236938,synthetic,low
+Toyota,Highlander,2020,2025,216923,216923,synthetic,low
+Toyota,Tacoma,2010,2011,271907,271907,synthetic,low
+Toyota,Tacoma,2010,2012,269009,269009,synthetic,low
+Toyota,Tacoma,2010,2013,245911,245911,synthetic,low
+Toyota,Tacoma,2010,2014,213992,213992,synthetic,low
+Toyota,Tacoma,2010,2015,203707,203707,synthetic,low
+Toyota,Tacoma,2015,2016,336451,336451,synthetic,low
+Toyota,Tacoma,2015,2017,325767,325767,synthetic,low
+Toyota,Tacoma,2015,2018,286591,286591,synthetic,low
+Toyota,Tacoma,2015,2019,258529,258529,synthetic,low
+Toyota,Tacoma,2015,2020,237402,237402,synthetic,low
+Toyota,Tacoma,2020,2021,392393,392393,synthetic,low
+Toyota,Tacoma,2020,2022,350287,350287,synthetic,low
+Toyota,Tacoma,2020,2023,332888,332888,synthetic,low
+Toyota,Tacoma,2020,2024,315769,315769,synthetic,low
+Toyota,Tacoma,2020,2025,276582,276582,synthetic,low
+Honda,Accord,2005,2006,408211,408211,synthetic,low
+Honda,Accord,2005,2007,405624,405624,synthetic,low
+Honda,Accord,2005,2008,355826,355826,synthetic,low
+Honda,Accord,2005,2009,313669,313669,synthetic,low
+Honda,Accord,2005,2010,287258,287258,synthetic,low
+Honda,Accord,2010,2011,451653,451653,synthetic,low
+Honda,Accord,2010,2012,437910,437910,synthetic,low
+Honda,Accord,2010,2013,409427,409427,synthetic,low
+Honda,Accord,2010,2014,363134,363134,synthetic,low
+Honda,Accord,2010,2015,322008,322008,synthetic,low
+Honda,Accord,2015,2016,494080,494080,synthetic,low
+Honda,Accord,2015,2017,482821,482821,synthetic,low
+Honda,Accord,2015,2018,424432,424432,synthetic,low
+Honda,Accord,2015,2019,407685,407685,synthetic,low
+Honda,Accord,2015,2020,371119,371119,synthetic,low
+Honda,Accord,2020,2021,408993,408993,synthetic,low
+Honda,Accord,2020,2022,404331,404331,synthetic,low
+Honda,Accord,2020,2023,370565,370565,synthetic,low
+Honda,Accord,2020,2024,336073,336073,synthetic,low
+Honda,Accord,2020,2025,300866,300866,synthetic,low
+Honda,Civic,2005,2006,385356,385356,synthetic,low
+Honda,Civic,2005,2007,336019,336019,synthetic,low
+Honda,Civic,2005,2008,319533,319533,synthetic,low
+Honda,Civic,2005,2009,294532,294532,synthetic,low
+Honda,Civic,2005,2010,284583,284583,synthetic,low
+Honda,Civic,2010,2011,435785,435785,synthetic,low
+Honda,Civic,2010,2012,377257,377257,synthetic,low
+Honda,Civic,2010,2013,355508,355508,synthetic,low
+Honda,Civic,2010,2014,316539,316539,synthetic,low
+Honda,Civic,2010,2015,313300,313300,synthetic,low
+Honda,Civic,2015,2016,477043,477043,synthetic,low
+Honda,Civic,2015,2017,414670,414670,synthetic,low
+Honda,Civic,2015,2018,394753,394753,synthetic,low
+Honda,Civic,2015,2019,362099,362099,synthetic,low
+Honda,Civic,2015,2020,318100,318100,synthetic,low
+Honda,Civic,2020,2021,410500,410500,synthetic,low
+Honda,Civic,2020,2022,369449,369449,synthetic,low
+Honda,Civic,2020,2023,347993,347993,synthetic,low
+Honda,Civic,2020,2024,312420,312420,synthetic,low
+Honda,Civic,2020,2025,272245,272245,synthetic,low
+Honda,CR-V,2010,2011,284900,284900,synthetic,low
+Honda,CR-V,2010,2012,253979,253979,synthetic,low
+Honda,CR-V,2010,2013,255988,255988,synthetic,low
+Honda,CR-V,2010,2014,234371,234371,synthetic,low
+Honda,CR-V,2010,2015,214644,214644,synthetic,low
+Honda,CR-V,2015,2016,343262,343262,synthetic,low
+Honda,CR-V,2015,2017,307765,307765,synthetic,low
+Honda,CR-V,2015,2018,307438,307438,synthetic,low
+Honda,CR-V,2015,2019,284721,284721,synthetic,low
+Honda,CR-V,2015,2020,240348,240348,synthetic,low
+Honda,CR-V,2020,2021,389453,389453,synthetic,low
+Honda,CR-V,2020,2022,343343,343343,synthetic,low
+Honda,CR-V,2020,2023,338698,338698,synthetic,low
+Honda,CR-V,2020,2024,311761,311761,synthetic,low
+Honda,CR-V,2020,2025,269010,269010,synthetic,low
+Ford,F-150,2005,2006,678319,678319,synthetic,low
+Ford,F-150,2005,2007,628715,628715,synthetic,low
+Ford,F-150,2005,2008,562029,562029,synthetic,low
+Ford,F-150,2005,2009,549228,549228,synthetic,low
+Ford,F-150,2005,2010,483402,483402,synthetic,low
+Ford,F-150,2010,2011,699249,699249,synthetic,low
+Ford,F-150,2010,2012,665002,665002,synthetic,low
+Ford,F-150,2010,2013,623420,623420,synthetic,low
+Ford,F-150,2010,2014,543900,543900,synthetic,low
+Ford,F-150,2010,2015,506091,506091,synthetic,low
+Ford,F-150,2015,2016,860602,860602,synthetic,low
+Ford,F-150,2015,2017,765706,765706,synthetic,low
+Ford,F-150,2015,2018,689751,689751,synthetic,low
+Ford,F-150,2015,2019,639646,639646,synthetic,low
+Ford,F-150,2015,2020,565178,565178,synthetic,low
+Ford,F-150,2020,2021,855773,855773,synthetic,low
+Ford,F-150,2020,2022,796491,796491,synthetic,low
+Ford,F-150,2020,2023,751409,751409,synthetic,low
+Ford,F-150,2020,2024,666751,666751,synthetic,low
+Ford,F-150,2020,2025,612787,612787,synthetic,low
+Ford,Explorer,2005,2006,325413,325413,synthetic,low
+Ford,Explorer,2005,2007,316900,316900,synthetic,low
+Ford,Explorer,2005,2008,279975,279975,synthetic,low
+Ford,Explorer,2005,2009,275487,275487,synthetic,low
+Ford,Explorer,2005,2010,252333,252333,synthetic,low
+Ford,Explorer,2010,2011,363692,363692,synthetic,low
+Ford,Explorer,2010,2012,340440,340440,synthetic,low
+Ford,Explorer,2010,2013,327066,327066,synthetic,low
+Ford,Explorer,2010,2014,287445,287445,synthetic,low
+Ford,Explorer,2010,2015,262219,262219,synthetic,low
+Ford,Explorer,2015,2016,438291,438291,synthetic,low
+Ford,Explorer,2015,2017,389145,389145,synthetic,low
+Ford,Explorer,2015,2018,354516,354516,synthetic,low
+Ford,Explorer,2015,2019,336357,336357,synthetic,low
+Ford,Explorer,2015,2020,310137,310137,synthetic,low
+Ford,Explorer,2020,2021,445758,445758,synthetic,low
+Ford,Explorer,2020,2022,406142,406142,synthetic,low
+Ford,Explorer,2020,2023,386659,386659,synthetic,low
+Ford,Explorer,2020,2024,355459,355459,synthetic,low
+Ford,Explorer,2020,2025,328454,328454,synthetic,low
+Ford,Mustang,2005,2006,184123,184123,synthetic,low
+Ford,Mustang,2005,2007,168470,168470,synthetic,low
+Ford,Mustang,2005,2008,159728,159728,synthetic,low
+Ford,Mustang,2005,2009,134535,134535,synthetic,low
+Ford,Mustang,2005,2010,127695,127695,synthetic,low
+Ford,Mustang,2010,2011,186946,186946,synthetic,low
+Ford,Mustang,2010,2012,181122,181122,synthetic,low
+Ford,Mustang,2010,2013,156773,156773,synthetic,low
+Ford,Mustang,2010,2014,143367,143367,synthetic,low
+Ford,Mustang,2010,2015,135415,135415,synthetic,low
+Ford,Mustang,2015,2016,218281,218281,synthetic,low
+Ford,Mustang,2015,2017,197917,197917,synthetic,low
+Ford,Mustang,2015,2018,181549,181549,synthetic,low
+Ford,Mustang,2015,2019,178562,178562,synthetic,low
+Ford,Mustang,2015,2020,156710,156710,synthetic,low
+Ford,Mustang,2020,2021,207226,207226,synthetic,low
+Ford,Mustang,2020,2022,184925,184925,synthetic,low
+Ford,Mustang,2020,2023,161672,161672,synthetic,low
+Ford,Mustang,2020,2024,163513,163513,synthetic,low
+Ford,Mustang,2020,2025,148093,148093,synthetic,low
+Chevrolet,Silverado 1500,2005,2006,649077,649077,synthetic,low
+Chevrolet,Silverado 1500,2005,2007,594719,594719,synthetic,low
+Chevrolet,Silverado 1500,2005,2008,543066,543066,synthetic,low
+Chevrolet,Silverado 1500,2005,2009,466676,466676,synthetic,low
+Chevrolet,Silverado 1500,2005,2010,443525,443525,synthetic,low
+Chevrolet,Silverado 1500,2010,2011,641107,641107,synthetic,low
+Chevrolet,Silverado 1500,2010,2012,601191,601191,synthetic,low
+Chevrolet,Silverado 1500,2010,2013,533968,533968,synthetic,low
+Chevrolet,Silverado 1500,2010,2014,507714,507714,synthetic,low
+Chevrolet,Silverado 1500,2010,2015,495765,495765,synthetic,low
+Chevrolet,Silverado 1500,2015,2016,722625,722625,synthetic,low
+Chevrolet,Silverado 1500,2015,2017,700139,700139,synthetic,low
+Chevrolet,Silverado 1500,2015,2018,623518,623518,synthetic,low
+Chevrolet,Silverado 1500,2015,2019,571792,571792,synthetic,low
+Chevrolet,Silverado 1500,2015,2020,554374,554374,synthetic,low
+Chevrolet,Silverado 1500,2020,2021,829138,829138,synthetic,low
+Chevrolet,Silverado 1500,2020,2022,730853,730853,synthetic,low
+Chevrolet,Silverado 1500,2020,2023,683260,683260,synthetic,low
+Chevrolet,Silverado 1500,2020,2024,593927,593927,synthetic,low
+Chevrolet,Silverado 1500,2020,2025,554445,554445,synthetic,low
+Chevrolet,Malibu,2010,2011,324529,324529,synthetic,low
+Chevrolet,Malibu,2010,2012,287458,287458,synthetic,low
+Chevrolet,Malibu,2010,2013,263491,263491,synthetic,low
+Chevrolet,Malibu,2010,2014,247379,247379,synthetic,low
+Chevrolet,Malibu,2010,2015,212247,212247,synthetic,low
+Chevrolet,Malibu,2015,2016,352946,352946,synthetic,low
+Chevrolet,Malibu,2015,2017,322091,322091,synthetic,low
+Chevrolet,Malibu,2015,2018,306688,306688,synthetic,low
+Chevrolet,Malibu,2015,2019,263204,263204,synthetic,low
+Chevrolet,Malibu,2015,2020,262290,262290,synthetic,low
+Chevrolet,Malibu,2020,2021,277823,277823,synthetic,low
+Chevrolet,Malibu,2020,2022,258417,258417,synthetic,low
+Chevrolet,Malibu,2020,2023,247788,247788,synthetic,low
+Chevrolet,Malibu,2020,2024,229776,229776,synthetic,low
+Chevrolet,Malibu,2020,2025,202252,202252,synthetic,low
+GMC,Sierra 1500,2010,2011,307836,307836,synthetic,low
+GMC,Sierra 1500,2010,2012,305890,305890,synthetic,low
+GMC,Sierra 1500,2010,2013,263974,263974,synthetic,low
+GMC,Sierra 1500,2010,2014,251535,251535,synthetic,low
+GMC,Sierra 1500,2010,2015,231982,231982,synthetic,low
+GMC,Sierra 1500,2015,2016,367011,367011,synthetic,low
+GMC,Sierra 1500,2015,2017,343248,343248,synthetic,low
+GMC,Sierra 1500,2015,2018,313881,313881,synthetic,low
+GMC,Sierra 1500,2015,2019,300639,300639,synthetic,low
+GMC,Sierra 1500,2015,2020,257226,257226,synthetic,low
+GMC,Sierra 1500,2020,2021,418863,418863,synthetic,low
+GMC,Sierra 1500,2020,2022,367343,367343,synthetic,low
+GMC,Sierra 1500,2020,2023,343407,343407,synthetic,low
+GMC,Sierra 1500,2020,2024,324743,324743,synthetic,low
+GMC,Sierra 1500,2020,2025,287846,287846,synthetic,low
+Honda,Pilot,2010,2011,186507,186507,synthetic,low
+Honda,Pilot,2010,2012,179202,179202,synthetic,low
+Honda,Pilot,2010,2013,153941,153941,synthetic,low
+Honda,Pilot,2010,2014,147333,147333,synthetic,low
+Honda,Pilot,2010,2015,142899,142899,synthetic,low
+Honda,Pilot,2015,2016,230914,230914,synthetic,low
+Honda,Pilot,2015,2017,193762,193762,synthetic,low
+Honda,Pilot,2015,2018,180866,180866,synthetic,low
+Honda,Pilot,2015,2019,167288,167288,synthetic,low
+Honda,Pilot,2015,2020,164434,164434,synthetic,low
+Honda,Pilot,2020,2021,259521,259521,synthetic,low
+Honda,Pilot,2020,2022,238723,238723,synthetic,low
+Honda,Pilot,2020,2023,208839,208839,synthetic,low
+Honda,Pilot,2020,2024,188009,188009,synthetic,low
+Honda,Pilot,2020,2025,185075,185075,synthetic,low
+Subaru,Outback,2010,2011,163256,163256,synthetic,low
+Subaru,Outback,2010,2012,148843,148843,synthetic,low
+Subaru,Outback,2010,2013,142022,142022,synthetic,low
+Subaru,Outback,2010,2014,126508,126508,synthetic,low
+Subaru,Outback,2010,2015,108981,108981,synthetic,low
+Subaru,Outback,2015,2016,216659,216659,synthetic,low
+Subaru,Outback,2015,2017,189323,189323,synthetic,low
+Subaru,Outback,2015,2018,180648,180648,synthetic,low
+Subaru,Outback,2015,2019,170702,170702,synthetic,low
+Subaru,Outback,2015,2020,144940,144940,synthetic,low
+Subaru,Outback,2020,2021,230770,230770,synthetic,low
+Subaru,Outback,2020,2022,212123,212123,synthetic,low
+Subaru,Outback,2020,2023,204217,204217,synthetic,low
+Subaru,Outback,2020,2024,182630,182630,synthetic,low
+Subaru,Outback,2020,2025,173736,173736,synthetic,low
+Subaru,Forester,2010,2011,143046,143046,synthetic,low
+Subaru,Forester,2010,2012,124982,124982,synthetic,low
+Subaru,Forester,2010,2013,120086,120086,synthetic,low
+Subaru,Forester,2010,2014,106443,106443,synthetic,low
+Subaru,Forester,2010,2015,100179,100179,synthetic,low
+Subaru,Forester,2015,2016,187296,187296,synthetic,low
+Subaru,Forester,2015,2017,171331,171331,synthetic,low
+Subaru,Forester,2015,2018,146140,146140,synthetic,low
+Subaru,Forester,2015,2019,139092,139092,synthetic,low
+Subaru,Forester,2015,2020,126071,126071,synthetic,low
+Subaru,Forester,2020,2021,190070,190070,synthetic,low
+Subaru,Forester,2020,2022,188988,188988,synthetic,low
+Subaru,Forester,2020,2023,171601,171601,synthetic,low
+Subaru,Forester,2020,2024,152030,152030,synthetic,low
+Subaru,Forester,2020,2025,146734,146734,synthetic,low
+Volkswagen,Jetta,2010,2011,180930,180930,synthetic,low
+Volkswagen,Jetta,2010,2012,164402,164402,synthetic,low
+Volkswagen,Jetta,2010,2013,144881,144881,synthetic,low
+Volkswagen,Jetta,2010,2014,134210,134210,synthetic,low
+Volkswagen,Jetta,2010,2015,133890,133890,synthetic,low
+Volkswagen,Jetta,2015,2016,197674,197674,synthetic,low
+Volkswagen,Jetta,2015,2017,175596,175596,synthetic,low
+Volkswagen,Jetta,2015,2018,166196,166196,synthetic,low
+Volkswagen,Jetta,2015,2019,149171,149171,synthetic,low
+Volkswagen,Jetta,2015,2020,131324,131324,synthetic,low
+Volkswagen,Jetta,2020,2021,154039,154039,synthetic,low
+Volkswagen,Jetta,2020,2022,144377,144377,synthetic,low
+Volkswagen,Jetta,2020,2023,140827,140827,synthetic,low
+Volkswagen,Jetta,2020,2024,128279,128279,synthetic,low
+Volkswagen,Jetta,2020,2025,118757,118757,synthetic,low
+Nissan,Altima,2010,2011,332765,332765,synthetic,low
+Nissan,Altima,2010,2012,285864,285864,synthetic,low
+Nissan,Altima,2010,2013,264064,264064,synthetic,low
+Nissan,Altima,2010,2014,239282,239282,synthetic,low
+Nissan,Altima,2010,2015,235667,235667,synthetic,low
+Nissan,Altima,2015,2016,363444,363444,synthetic,low
+Nissan,Altima,2015,2017,318985,318985,synthetic,low
+Nissan,Altima,2015,2018,299814,299814,synthetic,low
+Nissan,Altima,2015,2019,263125,263125,synthetic,low
+Nissan,Altima,2015,2020,261516,261516,synthetic,low
+Nissan,Altima,2020,2021,310938,310938,synthetic,low
+Nissan,Altima,2020,2022,289143,289143,synthetic,low
+Nissan,Altima,2020,2023,261811,261811,synthetic,low
+Nissan,Altima,2020,2024,242516,242516,synthetic,low
+Nissan,Altima,2020,2025,204704,204704,synthetic,low
+Nissan,Rogue,2015,2016,388989,388989,synthetic,low
+Nissan,Rogue,2015,2017,343733,343733,synthetic,low
+Nissan,Rogue,2015,2018,335488,335488,synthetic,low
+Nissan,Rogue,2015,2019,304844,304844,synthetic,low
+Nissan,Rogue,2015,2020,282140,282140,synthetic,low
+Nissan,Rogue,2020,2021,463983,463983,synthetic,low
+Nissan,Rogue,2020,2022,404345,404345,synthetic,low
+Nissan,Rogue,2020,2023,391825,391825,synthetic,low
+Nissan,Rogue,2020,2024,336676,336676,synthetic,low
+Nissan,Rogue,2020,2025,334374,334374,synthetic,low
+Dodge,Ram 1500,2005,2006,435060,435060,synthetic,low
+Dodge,Ram 1500,2005,2007,375674,375674,synthetic,low
+Dodge,Ram 1500,2005,2008,366742,366742,synthetic,low
+Dodge,Ram 1500,2005,2009,325750,325750,synthetic,low
+Dodge,Ram 1500,2005,2010,295023,295023,synthetic,low
+Dodge,Ram 1500,2010,2011,391223,391223,synthetic,low
+Dodge,Ram 1500,2010,2012,340076,340076,synthetic,low
+Dodge,Ram 1500,2010,2013,306311,306311,synthetic,low
+Dodge,Ram 1500,2010,2014,286821,286821,synthetic,low
+Dodge,Ram 1500,2010,2015,267554,267554,synthetic,low
+Ram,Ram 1500,2015,2016,559675,559675,synthetic,low
+Ram,Ram 1500,2015,2017,519995,519995,synthetic,low
+Ram,Ram 1500,2015,2018,446960,446960,synthetic,low
+Ram,Ram 1500,2015,2019,426440,426440,synthetic,low
+Ram,Ram 1500,2015,2020,382971,382971,synthetic,low
+Ram,Ram 1500,2020,2021,649831,649831,synthetic,low
+Ram,Ram 1500,2020,2022,572465,572465,synthetic,low
+Ram,Ram 1500,2020,2023,547817,547817,synthetic,low
+Ram,Ram 1500,2020,2024,464215,464215,synthetic,low
+Ram,Ram 1500,2020,2025,465057,465057,synthetic,low
+Hyundai,Elantra,2010,2011,232285,232285,synthetic,low
+Hyundai,Elantra,2010,2012,231012,231012,synthetic,low
+Hyundai,Elantra,2010,2013,198371,198371,synthetic,low
+Hyundai,Elantra,2010,2014,179566,179566,synthetic,low
+Hyundai,Elantra,2010,2015,170809,170809,synthetic,low
+Hyundai,Elantra,2015,2016,286399,286399,synthetic,low
+Hyundai,Elantra,2015,2017,252800,252800,synthetic,low
+Hyundai,Elantra,2015,2018,239509,239509,synthetic,low
+Hyundai,Elantra,2015,2019,218281,218281,synthetic,low
+Hyundai,Elantra,2015,2020,198287,198287,synthetic,low
+Hyundai,Elantra,2020,2021,251914,251914,synthetic,low
+Hyundai,Elantra,2020,2022,224358,224358,synthetic,low
+Hyundai,Elantra,2020,2023,216017,216017,synthetic,low
+Hyundai,Elantra,2020,2024,184971,184971,synthetic,low
+Hyundai,Elantra,2020,2025,186720,186720,synthetic,low
+Hyundai,Tucson,2015,2016,200769,200769,synthetic,low
+Hyundai,Tucson,2015,2017,188037,188037,synthetic,low
+Hyundai,Tucson,2015,2018,173375,173375,synthetic,low
+Hyundai,Tucson,2015,2019,158394,158394,synthetic,low
+Hyundai,Tucson,2015,2020,141333,141333,synthetic,low
+Hyundai,Tucson,2020,2021,220109,220109,synthetic,low
+Hyundai,Tucson,2020,2022,215075,215075,synthetic,low
+Hyundai,Tucson,2020,2023,191366,191366,synthetic,low
+Hyundai,Tucson,2020,2024,175765,175765,synthetic,low
+Hyundai,Tucson,2020,2025,170504,170504,synthetic,low
+Kia,Sportage,2015,2016,173735,173735,synthetic,low
+Kia,Sportage,2015,2017,153277,153277,synthetic,low
+Kia,Sportage,2015,2018,141143,141143,synthetic,low
+Kia,Sportage,2015,2019,131164,131164,synthetic,low
+Kia,Sportage,2015,2020,120598,120598,synthetic,low
+Kia,Sportage,2020,2021,186117,186117,synthetic,low
+Kia,Sportage,2020,2022,168284,168284,synthetic,low
+Kia,Sportage,2020,2023,159536,159536,synthetic,low
+Kia,Sportage,2020,2024,154465,154465,synthetic,low
+Kia,Sportage,2020,2025,138528,138528,synthetic,low
+Mazda,Mazda3,2010,2011,166444,166444,synthetic,low
+Mazda,Mazda3,2010,2012,148900,148900,synthetic,low
+Mazda,Mazda3,2010,2013,132728,132728,synthetic,low
+Mazda,Mazda3,2010,2014,125187,125187,synthetic,low
+Mazda,Mazda3,2010,2015,108896,108896,synthetic,low
+Mazda,Mazda3,2015,2016,166377,166377,synthetic,low
+Mazda,Mazda3,2015,2017,155303,155303,synthetic,low
+Mazda,Mazda3,2015,2018,145038,145038,synthetic,low
+Mazda,Mazda3,2015,2019,134424,134424,synthetic,low
+Mazda,Mazda3,2015,2020,121360,121360,synthetic,low
+Mazda,Mazda3,2020,2021,149132,149132,synthetic,low
+Mazda,Mazda3,2020,2022,134049,134049,synthetic,low
+Mazda,Mazda3,2020,2023,126619,126619,synthetic,low
+Mazda,Mazda3,2020,2024,121489,121489,synthetic,low
+Mazda,Mazda3,2020,2025,110639,110639,synthetic,low
+BMW,3 Series,2010,2011,135375,135375,synthetic,low
+BMW,3 Series,2010,2012,123452,123452,synthetic,low
+BMW,3 Series,2010,2013,118679,118679,synthetic,low
+BMW,3 Series,2010,2014,110465,110465,synthetic,low
+BMW,3 Series,2010,2015,98642,98642,synthetic,low
+BMW,3 Series,2015,2016,165094,165094,synthetic,low
+BMW,3 Series,2015,2017,150896,150896,synthetic,low
+BMW,3 Series,2015,2018,137764,137764,synthetic,low
+BMW,3 Series,2015,2019,121159,121159,synthetic,low
+BMW,3 Series,2015,2020,111174,111174,synthetic,low
+BMW,3 Series,2020,2021,133341,133341,synthetic,low
+BMW,3 Series,2020,2022,125513,125513,synthetic,low
+BMW,3 Series,2020,2023,118201,118201,synthetic,low
+BMW,3 Series,2020,2024,112829,112829,synthetic,low
+BMW,3 Series,2020,2025,96010,96010,synthetic,low
+Mercedes-Benz,C-Class,2010,2011,128887,128887,synthetic,low
+Mercedes-Benz,C-Class,2010,2012,121151,121151,synthetic,low
+Mercedes-Benz,C-Class,2010,2013,106669,106669,synthetic,low
+Mercedes-Benz,C-Class,2010,2014,103217,103217,synthetic,low
+Mercedes-Benz,C-Class,2010,2015,93078,93078,synthetic,low
+Mercedes-Benz,C-Class,2015,2016,146159,146159,synthetic,low
+Mercedes-Benz,C-Class,2015,2017,140153,140153,synthetic,low
+Mercedes-Benz,C-Class,2015,2018,120682,120682,synthetic,low
+Mercedes-Benz,C-Class,2015,2019,119734,119734,synthetic,low
+Mercedes-Benz,C-Class,2015,2020,110360,110360,synthetic,low
+Mercedes-Benz,C-Class,2020,2021,134492,134492,synthetic,low
+Mercedes-Benz,C-Class,2020,2022,127835,127835,synthetic,low
+Mercedes-Benz,C-Class,2020,2023,114655,114655,synthetic,low
+Mercedes-Benz,C-Class,2020,2024,114008,114008,synthetic,low
+Mercedes-Benz,C-Class,2020,2025,100475,100475,synthetic,low
+Audi,A4,2010,2011,85951,85951,synthetic,low
+Audi,A4,2010,2012,80723,80723,synthetic,low
+Audi,A4,2010,2013,78829,78829,synthetic,low
+Audi,A4,2010,2014,69776,69776,synthetic,low
+Audi,A4,2010,2015,66418,66418,synthetic,low
+Audi,A4,2015,2016,111843,111843,synthetic,low
+Audi,A4,2015,2017,106137,106137,synthetic,low
+Audi,A4,2015,2018,93992,93992,synthetic,low
+Audi,A4,2015,2019,89510,89510,synthetic,low
+Audi,A4,2015,2020,81887,81887,synthetic,low
+Audi,A4,2020,2021,101126,101126,synthetic,low
+Audi,A4,2020,2022,94017,94017,synthetic,low
+Audi,A4,2020,2023,84680,84680,synthetic,low
+Audi,A4,2020,2024,80442,80442,synthetic,low
+Audi,A4,2020,2025,71982,71982,synthetic,low
+Tesla,Model 3,2018,2019,83177,83177,synthetic,low
+Tesla,Model 3,2018,2020,75393,75393,synthetic,low
+Tesla,Model 3,2018,2021,67540,67540,synthetic,low
+Tesla,Model 3,2018,2022,60794,60794,synthetic,low
+Tesla,Model 3,2018,2023,55862,55862,synthetic,low
+Tesla,Model 3,2020,2021,202753,202753,synthetic,low
+Tesla,Model 3,2020,2022,188890,188890,synthetic,low
+Tesla,Model 3,2020,2023,169640,169640,synthetic,low
+Tesla,Model 3,2020,2024,157711,157711,synthetic,low
+Tesla,Model 3,2020,2025,140049,140049,synthetic,low
+Tesla,Model Y,2020,2021,143662,143662,synthetic,low
+Tesla,Model Y,2020,2022,135043,135043,synthetic,low
+Tesla,Model Y,2020,2023,124061,124061,synthetic,low
+Tesla,Model Y,2020,2024,114697,114697,synthetic,low
+Tesla,Model Y,2020,2025,107890,107890,synthetic,low
+Jeep,Grand Cherokee,2010,2011,269874,269874,synthetic,low
+Jeep,Grand Cherokee,2010,2012,250677,250677,synthetic,low
+Jeep,Grand Cherokee,2010,2013,241588,241588,synthetic,low
+Jeep,Grand Cherokee,2010,2014,222533,222533,synthetic,low
+Jeep,Grand Cherokee,2010,2015,191848,191848,synthetic,low
+Jeep,Grand Cherokee,2015,2016,317043,317043,synthetic,low
+Jeep,Grand Cherokee,2015,2017,295654,295654,synthetic,low
+Jeep,Grand Cherokee,2015,2018,268566,268566,synthetic,low
+Jeep,Grand Cherokee,2015,2019,241875,241875,synthetic,low
+Jeep,Grand Cherokee,2015,2020,227415,227415,synthetic,low
+Jeep,Grand Cherokee,2020,2021,364169,364169,synthetic,low
+Jeep,Grand Cherokee,2020,2022,324707,324707,synthetic,low
+Jeep,Grand Cherokee,2020,2023,302032,302032,synthetic,low
+Jeep,Grand Cherokee,2020,2024,282263,282263,synthetic,low
+Jeep,Grand Cherokee,2020,2025,257396,257396,synthetic,low
+Jeep,Wrangler,2010,2011,187727,187727,synthetic,low
+Jeep,Wrangler,2010,2012,166163,166163,synthetic,low
+Jeep,Wrangler,2010,2013,158432,158432,synthetic,low
+Jeep,Wrangler,2010,2014,151700,151700,synthetic,low
+Jeep,Wrangler,2010,2015,140925,140925,synthetic,low
+Jeep,Wrangler,2015,2016,229975,229975,synthetic,low
+Jeep,Wrangler,2015,2017,200760,200760,synthetic,low
+Jeep,Wrangler,2015,2018,190816,190816,synthetic,low
+Jeep,Wrangler,2015,2019,172101,172101,synthetic,low
+Jeep,Wrangler,2015,2020,159233,159233,synthetic,low
+Jeep,Wrangler,2020,2021,252734,252734,synthetic,low
+Jeep,Wrangler,2020,2022,232488,232488,synthetic,low
+Jeep,Wrangler,2020,2023,218651,218651,synthetic,low
+Jeep,Wrangler,2020,2024,192923,192923,synthetic,low
+Jeep,Wrangler,2020,2025,183209,183209,synthetic,low
