@@ -152,6 +152,158 @@ app = FirecrawlApp(
 result = app.scrape_url("https://example.com/specs", formats=["markdown"])
 ```
 
+### Apache Tika — document text and metadata extraction
+
+Extract text and metadata from binary files (PDF, DOCX, XLSX, PPTX, HTML, emails, archives, etc.).
+
+- **Base URL:** `https://TIKA_HOST`
+- **No auth required**
+- **Python client:** `pip install tika` or use `requests` directly
+
+Key endpoints:
+
+| Method | Endpoint | What it does |
+|---|---|---|
+| `PUT` | `/tika` | Extract plain text from any file (send binary body, returns `text/plain`) |
+| `PUT` | `/meta` | Extract metadata as JSON or CSV (`Accept: application/json`) |
+| `PUT` | `/rmeta` | Recursive metadata — use for ZIP, email with attachments |
+| `PUT` | `/detect/stream` | Detect MIME type of a file |
+| `POST` | `/language/stream` | Detect language of a document |
+
+When to use Tika:
+
+- A data source is a PDF, Word doc, or spreadsheet with no machine-readable alternative
+- You need to extract tabular data or metadata from government reports, spec sheets, or filings
+- Processing a bulk archive of documents (ZIP → recursive parse)
+
+Rules:
+
+- Always store the original binary file in `data/raw/` alongside extracted output
+- Record file name, source URL, and extraction timestamp in every output row
+- Prefer `/rmeta` (JSON) over `/tika` (plain text) when structure matters
+
+Example usage:
+
+```python
+import requests
+
+with open("report.pdf", "rb") as f:
+    resp = requests.put(
+        "https://TIKA_HOST/tika",
+        data=f,
+        headers={"Accept": "text/plain"},
+    )
+text = resp.text
+```
+
+---
+
+### Ollama — local LLM inference
+
+Run open-weight LLMs locally for classification, extraction, summarisation, and embedding tasks.
+
+- **Base URL:** `https://OLLAMA_HOST`
+- **No auth required**
+- **Python client:** `pip install ollama` or use `requests` directly
+
+Available models (as of 2026-03):
+
+| Model | Family | Size | Best for |
+|---|---|---|---|
+| `sykul-coach-qwen3-14b:v3` | qwen3 | 14.8B | Best quality, complex reasoning |
+| `sykul-coach-mistral-nemo-12b:v3` | llama | 12.2B | General instruction following |
+| `sykul-coach-qwen3-8b:v3` | qwen3 | 8.2B | Balanced speed/quality |
+| `sykul-coach-granite3.3-8b:v3` | granite | 8.2B | Structured output, code |
+| `sykul-coach-llama3.1-8b:v3` | llama | 8.0B | General purpose |
+| `sykul-coach-qwen2.5-7b:v3` | qwen2 | 7.6B | Fast, lightweight tasks |
+| `sykul-coach-gemma2-9b:latest` | gemma2 | 9.2B | General purpose |
+
+Check current model list: `GET /api/tags`
+
+Key endpoints:
+
+| Method | Endpoint | What it does |
+|---|---|---|
+| `POST` | `/api/generate` | Single-turn text generation |
+| `POST` | `/api/chat` | Multi-turn chat |
+| `POST` | `/api/embeddings` | Generate text embeddings |
+| `GET` | `/api/tags` | List available models |
+
+When to use Ollama:
+
+- Classifying free-text fields (e.g. vehicle trim descriptions → signal colour)
+- Extracting structured fields from unstructured scraped text
+- Generating embeddings for fuzzy matching / deduplication
+- Summarising long documents after Tika extraction
+- **Never use Ollama to generate data** — only to classify or extract from real data
+
+Rules:
+
+- LLM output is **not a data source** — it is a processing step applied to real data
+- Always log the model name, prompt version, and temperature used
+- Include an `llm_confidence` or `llm_flag` field so LLM-derived values can be excluded
+- Use deterministic settings (`temperature: 0`) for classification tasks
+
+Example usage:
+
+```python
+import requests
+
+resp = requests.post(
+    "https://OLLAMA_HOST/api/generate",
+    json={
+        "model": "sykul-coach-qwen3-8b:v3",
+        "prompt": "Classify the rear turn signal colour as 'amber' or 'red': 'sequential LED tail lamps with integrated amber turn signals'",
+        "stream": False,
+        "options": {"temperature": 0},
+    },
+)
+result = resp.json()["response"]
+```
+
+---
+
+### SearXNG — privacy-respecting metasearch
+
+Search the web across multiple engines without tracking. Useful for finding data sources, specifications, and documentation.
+
+- **Base URL:** `https://SEARXNG_HOST`
+- **No auth required**
+- **Version:** 2026.2.15
+
+Key endpoint:
+
+```
+GET /search?q=<query>&format=json&categories=<category>&language=en
+```
+
+Categories: `general`, `news`, `images`, `videos`, `science`, `files`, `it`, `map`, `music`, `social media`
+
+When to use SearXNG:
+
+- Finding primary sources for a dataset (government databases, manufacturer spec pages)
+- Locating downloadable files (PDFs, CSVs) on a topic
+- Checking whether a data source exists before committing to manual collection
+- Cross-referencing facts across multiple sources
+
+Rules:
+
+- SearXNG returns URLs and snippets — **always fetch and verify the actual source**
+- Never cite a SearXNG result as a source; cite the underlying page it found
+- Combine with Firecrawl to go from search result → full page content
+
+Example usage:
+
+```python
+import requests
+
+resp = requests.get(
+    "https://SEARXNG_HOST/search",
+    params={"q": "NHTSA FARS fatality data CSV download", "format": "json", "language": "en"},
+)
+results = resp.json()["results"]  # list of {url, title, content, ...}
+```
+
 ---
 
 ## What Copilot must never do
