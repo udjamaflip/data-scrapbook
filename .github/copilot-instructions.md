@@ -105,6 +105,55 @@ DEMO_DATA=TRUE and never mixed with real data.
 
 ---
 
+## Available tools and skills
+
+### Firecrawl — web scraping and crawling
+
+A self-hosted Firecrawl instance is available for this repository.
+
+- **Base URL:** `https://FIRECRAWL_HOST`
+- **Auth:** `FIRECRAWL_API_KEY` from `.env` (pass as `Authorization: Bearer <key>` header)
+- **SDK:** `pip install firecrawl-py` then `from firecrawl import FirecrawlApp`
+
+Capabilities:
+
+| Endpoint | What it does |
+|---|---|
+| `POST /v1/scrape` | Scrape a single URL → clean markdown, HTML, or structured JSON |
+| `POST /v1/crawl` | Crawl an entire site and return all pages as markdown |
+| `POST /v1/search` | Web search returning full page content from results |
+| `POST /v1/interact` | Scrape then click/fill forms/navigate dynamic content |
+
+When to use Firecrawl:
+
+- A data source exists on a website but has no downloadable CSV or API
+- You need to scrape manufacturer spec pages, government databases, or product listings
+- JavaScript rendering is required (SPAs, dynamically-loaded tables)
+- You need to crawl an entire documentation site or spec archive
+
+Rules for Firecrawl use:
+
+- **Always store the raw scraped content** in `data/raw/` alongside the extracted data so the scrape is reproducible
+- **Record the scrape date** — scraped data must have a `retrieved_at` field
+- **Rate-limit politely** — add delays between requests, respect `robots.txt` unless instructed otherwise
+- **Scraping is not fabrication** — extracted content is real data; document the source URL for every row
+- Use a `.env` file (gitignored) for `FIRECRAWL_BASE_URL` and `FIRECRAWL_API_KEY`; add both to `.env.example`
+
+Example usage:
+
+```python
+import os
+from firecrawl import FirecrawlApp
+
+app = FirecrawlApp(
+    api_key=os.environ["FIRECRAWL_API_KEY"],
+    api_url=os.environ.get("FIRECRAWL_BASE_URL", "https://FIRECRAWL_HOST"),
+)
+result = app.scrape_url("https://example.com/specs", formats=["markdown"])
+```
+
+---
+
 ## What Copilot must never do
 
 - Fabricate data, create sample datasets, or fill gaps with plausible-looking values
