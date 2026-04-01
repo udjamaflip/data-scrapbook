@@ -206,19 +206,14 @@ Run open-weight LLMs locally for classification, extraction, summarisation, and 
 - **No auth required**
 - **Python client:** `pip install ollama` or use `requests` directly
 
-Available models (as of 2026-03):
+**Always query the live model list before use** — available models change frequently:
 
-| Model | Family | Size | Best for |
-|---|---|---|---|
-| `sykul-coach-qwen3-14b:v3` | qwen3 | 14.8B | Best quality, complex reasoning |
-| `sykul-coach-mistral-nemo-12b:v3` | llama | 12.2B | General instruction following |
-| `sykul-coach-qwen3-8b:v3` | qwen3 | 8.2B | Balanced speed/quality |
-| `sykul-coach-granite3.3-8b:v3` | granite | 8.2B | Structured output, code |
-| `sykul-coach-llama3.1-8b:v3` | llama | 8.0B | General purpose |
-| `sykul-coach-qwen2.5-7b:v3` | qwen2 | 7.6B | Fast, lightweight tasks |
-| `sykul-coach-gemma2-9b:latest` | gemma2 | 9.2B | General purpose |
+```
+GET /api/tags  →  returns {"models": [{name, details.parameter_size, details.family, ...}]}
+```
 
-Check current model list: `GET /api/tags`
+Never hardcode a model name. Always fetch `/api/tags`, pick an appropriate model for the task,
+and log the chosen model name alongside any output it produced.
 
 Key endpoints:
 
