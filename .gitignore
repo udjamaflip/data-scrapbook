@@ -48,8 +48,7 @@ htmlcov/
 Thumbs.db
 desktop.ini
 
-# ── Scratch / temporary ───────────────────────────────────────────────────────
-scratch/
-*.tmp
-*.temp
+# ── Local-only Copilot config (private URLs, not for public repo) ─────────────
+.github/copilot-instructions.local.md
+
 
