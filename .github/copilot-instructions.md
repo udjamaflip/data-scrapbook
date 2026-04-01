@@ -1,102 +1,118 @@
 # GitHub Copilot Instructions — data-scrapbook
 
-This repository is a collection of self-contained data analysis projects ("scrapbook").
-Each project lives in its own subdirectory.
+This repository is a collection of self-contained data investigation projects.
+Each project asks a specific question and answers it with real data, honest analysis,
+and clearly documented limitations.
+
+---
+
+## The one rule that overrides everything else
+
+**Never fabricate, synthesise, or simulate data.**
+
+If real data is unavailable:
+1. Find another source — no matter how manual or tedious that process is
+2. If no source exists, say so explicitly and stop — do not approximate, interpolate,
+   or invent plausible-looking numbers
+3. A project with an honest "this data does not exist publicly" conclusion is
+   more valuable than a project with fake data dressed up as real
+
+This applies to everything: input datasets, sample rows, placeholder values,
+"illustrative" examples, demo files, test fixtures. If it is not sourced, it
+does not go in the analysis.
+
+The only exception: clearly-labelled smoke-test fixtures used solely to verify
+pipeline mechanics (not to draw conclusions), explicitly flagged with
+DEMO_DATA=TRUE and never mixed with real data.
+
+---
+
+## Data sourcing principles
+
+- **Cite every source.** Every dataset must have a source and source_url column
+  or equivalent provenance field. If you cannot cite it, you cannot use it.
+- **Record retrieval date.** For any manually collected or scraped data, record
+  when it was retrieved — sources change.
+- **Prefer primary sources.** Manufacturer specs > enthusiast wikis > forums.
+  Government databases > news articles > blog posts.
+- **Be honest about confidence.** Use a confidence_score (0-1) or equivalent flag.
+  Low-confidence rows must be excluded from headline results, not quietly included.
+- **Document dead ends.** If you tried a source and it did not work out, note that in
+  the project README so future contributors do not repeat the effort.
+- **Manual collection is fine.** Spending hours reading spec sheets and entering data
+  by hand is legitimate data engineering. It just needs to be documented.
+
+---
+
+## Analysis principles
+
+- **Rates over raw counts.** Never present raw counts as a meaningful comparison
+  without normalising for exposure, population, or denominator.
+- **Show the denominator.** Always make the exposure or base population visible in
+  charts and tables — not just the rate.
+- **Exclude, do not impute.** If data is missing or low-quality, exclude that row and
+  note the gap. Do not fill, forward-fill, or guess.
+- **Separate correlation from causation.** Always state explicitly when a finding
+  is correlational. Never imply causation from observational data.
+- **Surface confounders.** Identify and document the most plausible confounders even
+  if you cannot control for them. Stratify where the data allows.
+- **Small samples require explicit warnings.** Any statistical result with n < 30 per
+  group must be flagged. Any result with n < 10 must be suppressed from headline output.
+- **Effect size, not just p-value.** Always report Cohen's d or equivalent alongside
+  significance tests.
+
+---
+
+## Code conventions
+
+- **Python 3.10+.** Use `from __future__ import annotations` for forward references.
+- **pandas for data, matplotlib for charts.** No seaborn. No plotly. No bokeh.
+- **Type hints on all public functions.**
+- **Logging via the standard logging module.** Never use print() for pipeline output.
+- **Fail fast with actionable errors.** If a required input file is missing, raise a
+  clear FileNotFoundError with the expected path and instructions for obtaining the data.
+- **Never silently drop rows.** Log a warning, write dropped rows to unmatched_rows.csv
+  or equivalent, and count them in the data quality report.
+- **No hardcoded absolute paths.** Use Path(__file__).resolve().parent patterns.
+- **No hardcoded credentials.** Use .env files (gitignored) and python-dotenv.
 
 ---
 
 ## Repository conventions
 
 - **One project per subdirectory.** Each project is fully self-contained with its own
-  `README.md`, `requirements.txt`, `pyproject.toml`, `src/`, `scripts/`, and `data/` tree.
+  README.md, requirements.txt, pyproject.toml, src/, scripts/, and data/ tree.
 - **No cross-project imports.** Projects must not import from each other.
-- **Modular pipeline pattern.** Each project follows: ingest → clean → normalise → match → analyse → output.
-- **Data files are never committed.** Real input CSVs go in `data/raw/` (gitignored).
-  Only template CSVs (`data/raw/templates/`) and synthetic demo files (`*_demo.csv`) are committed.
-- **Generated outputs are never committed.** `data/intermediate/`, `data/final/`,
-  `outputs/charts/`, `outputs/tables/` are all gitignored.
-- **Python 3.10+.** Use `from __future__ import annotations` for forward references.
-- **pandas for data, matplotlib for charts.** No seaborn. No plotly.
-- **Type hints on all public functions.**
-- **Logging via the standard library `logging` module.** Never use `print()` for pipeline
-  output — use `logger.info()` / `logger.warning()` etc.
-- **Fail fast with actionable errors.** If a required input file is missing, raise a clear
-  `FileNotFoundError` with the expected path and a hint about how to generate it.
-- **Never silently drop rows.** Log a warning and write dropped rows to an `unmatched_rows.csv`.
-- **Rates over raw counts.** Never present raw crash counts as a meaningful comparison.
-  Always normalise by exposure (registered vehicle-years or equivalent).
-
----
-
-## Project: turn-signal-crash-rate
-
-**Location:** `turn-signal-crash-rate/`
-
-**Research question:** Do US-market vehicles with non-amber rear turn signals have higher
-fatal crash rates than vehicles with amber rear turn signals, after normalising for fleet exposure?
-
-**Data sources:**
-- `scripts/build_real_data.py` — downloads NHTSA FARS (2012–2022) and builds blinker colour
-  + fleet exposure datasets. Run this first before the main pipeline.
-- `data/raw/blinker_colors.csv` — researcher-curated: make/model/year → rear signal colour
-- `data/raw/exposure_data.csv` — fleet size estimates (annual sales × survival curve)
-- `data/raw/incident_data.csv` — NHTSA FARS fatal crash counts by make/model/year
-
-**Key design decisions:**
-- Blinker colour categories: `amber`, `non_amber`, `unknown` (no `mixed`)
-- Core analysis excludes rows with `confidence_score < 0.7`
-- Primary rate: `fatal_crashes_per_100k_rvy` (per 100 000 registered vehicle-years)
-- Statistical tests: Welch's t-test + Mann-Whitney U + Cohen's d + bootstrap 95% CIs
-- US market only (FMVSS 108 permits red or amber — European variants differ)
-
-**Running the pipeline:**
-```bash
-cd turn-signal-crash-rate
-pip install -r requirements.txt
-python scripts/build_real_data.py   # ~1 min, downloads ~300 MB NHTSA data
-python -m src.main                  # full pipeline
-python -m src.main --demo           # smoke-test with synthetic data (no download)
-```
-
-**Key blinker colour facts (US market):**
-- Toyota, Honda, Subaru, Nissan, Mazda, Hyundai, Kia → **amber** (global ECE standard maintained)
-- Porsche, Volvo, Jaguar, Land Rover → **amber** (ECE amber maintained in US-spec)
-- Ford, GM (Chevrolet/GMC/Buick/Cadillac), Ram, Jeep, Dodge, Chrysler, Lincoln → **non_amber** (red)
-- BMW, Audi, Mercedes-Benz, Volkswagen → **non_amber** in US (FMVSS 108 allows shared red housing)
-- Tesla Model S/X/3 → **non_amber**; Model Y 2020 → **non_amber**, 2021+ → **amber**
-- Source: FMVSS 108 (US) permits either colour; ECE Reg 6 (Europe) requires amber
-
-**Extending the pipeline:**
-- Add a new make/model/year blinker entry: edit `_BLINKER_SPEC` in `scripts/build_real_data.py`
-- Fix a name mismatch: edit `data/raw/templates/manual_vehicle_overrides.csv`
-- Add a make alias: edit `data/raw/templates/make_aliases.yaml`
-- Add a new chart: add a function to `src/charts.py` following the `_apply_style()` pattern,
-  then call it from `generate_all_charts()` at the bottom of that file
-
-**Chart palette:**
-- Background: `#F8F5EE` (warm cream)
-- Amber signal: `#C8891C` (line/edge), `#E8C070` (fill)
-- Non-amber signal: `#A04848` (line/edge), `#D08080` (fill)
-- Grid: `#E4D8C8`
-- Always call `_apply_style(ax)` on every Axes object; always pass
-  `facecolor=fig.get_facecolor()` to `fig.savefig()`
+- **Data files are never committed** (except templates and clearly-labelled demo fixtures).
+  Real input data goes in data/raw/ (gitignored). Generated outputs go in
+  data/intermediate/, data/final/, outputs/ (all gitignored).
+- **Every project README must include:**
+  - The specific research question
+  - Where each dataset came from (source, URL, retrieval method)
+  - Known data quality issues and limitations
+  - What conclusions can and cannot be drawn
 
 ---
 
 ## Adding a new project
 
-1. Create a new subdirectory: `mkdir <project-name>`
-2. Copy the structure from `turn-signal-crash-rate/` as a template
-3. Add a row to the table in the root `README.md`
-4. Add project-specific data ignore rules to `<project-name>/.gitignore`
+1. Create a new subdirectory: mkdir <project-name>
+2. Use turn-signal-crash-rate/ as a structural template
+3. Add a row to the table in the root README.md
+4. Add a project-level .gitignore for data/output paths
+5. Start with the research question and data sourcing — write the README before
+   writing any pipeline code
 
 ---
 
-## What Copilot should NOT do in this repo
+## What Copilot must never do
 
-- Do not commit real data files (any `*.csv` not in `templates/` or ending in `_demo.csv`)
-- Do not use seaborn, plotly, or bokeh — matplotlib only
-- Do not present raw counts as findings — always normalise
-- Do not silently drop rows — always log and save unmatched records
-- Do not add `print()` statements — use the `logging` module
-- Do not hardcode absolute paths — use `Path(__file__).resolve().parent` patterns
+- Fabricate data, create sample datasets, or fill gaps with plausible-looking values
+- Commit real data files
+- Present raw counts as findings without normalisation
+- Silently drop rows
+- Use print() instead of logging
+- Hardcode absolute paths
+- Use seaborn, plotly, or bokeh
+- Imply causation from observational data
+- Suppress small-sample warnings to make results look cleaner
